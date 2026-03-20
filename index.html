@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GigShield — Parametric Income Protection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body>
+<!-- PAGE LOADER -->
+<div id="pageLoader">
+  <div class="loader-ring"></div>
+  <div style="font-family:'Syne',sans-serif;font-size:14px;color:var(--muted);">GigShield</div>
+</div>
+
+<!-- TOAST AREA -->
+<div id="toastArea"></div>
+
+<!-- MODAL OVERLAY -->
+<div id="modalOverlay" class="hidden">
+  <div class="modal" id="modalBox">
+    <div class="modal-title" id="modalTitle"></div>
+    <div class="modal-sub" id="modalSub"></div>
+    <div id="modalBody"></div>
+    <div class="modal-actions" id="modalActions"></div>
+  </div>
+</div>
+
+<!-- ========== LOGIN ========== -->
+<div id="loginPage" class="hidden">
+  <div class="login-bg"></div>
+  <div class="grid-lines"></div>
+  <div class="login-card fade">
+    <div class="logo-row">
+      <div class="logo-icon">🛡️</div>
+      <span class="logo-text">GigShield</span>
+    </div>
+    <p class="login-sub">Parametric income protection for gig workers</p>
+    <div class="role-tabs">
+      <button class="role-tab active" id="roleWorker" onclick="API.setRole('worker')">👷 Worker</button>
+      <button class="role-tab" id="roleAdmin" onclick="API.setRole('admin')">🔧 Admin</button>
+    </div>
+    <div id="loginError" class="login-error hidden"></div>
+    <div class="field">
+      <label>Email</label>
+      <input id="loginEmail" type="email" placeholder="worker@gigshield.in" value="worker@gigshield.in"/>
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <input id="loginPass" type="password" placeholder="••••••••" value="worker123"/>
+    </div>
+    <button class="btn-primary" id="loginBtn" onclick="API.login()">
+      <span id="loginBtnText">Sign In</span>
+    </button>
+    <div class="demo-hint">
+      <strong>Demo Accounts</strong><br/>
+      Worker: worker@gigshield.in / worker123<br/>
+      Admin: admin@gigshield.in / admin123
+    </div>
+  </div>
+</div>
+
+<!-- ========== APP SHELL ========== -->
+<div id="appShell" class="hidden">
+  <div class="topbar">
+    <div class="topbar-logo">
+      <div class="logo-icon">🛡️</div>
+      <span class="logo-text">GigShield</span>
+    </div>
+    <div class="topbar-right">
+      <div class="live-badge"><span class="live-dot"></span> Live</div>
+      <div class="user-pill">
+        <div class="avatar" id="topAvatar">RK</div>
+        <span id="topName">Ravi Kumar</span>
+      </div>
+      <button class="logout-btn" onclick="API.logout()">Logout</button>
+    </div>
+  </div>
+
+  <!-- WORKER NAV -->
+  <nav class="nav-tabs hidden" id="workerNav">
+    <div class="nav-tab active" data-tab="w-overview">Overview</div>
+    <div class="nav-tab" data-tab="w-plan">My Plan</div>
+    <div class="nav-tab" data-tab="w-risk">Risk Map</div>
+    <div class="nav-tab" data-tab="w-payouts">Payouts</div>
+    <div class="nav-tab" data-tab="w-settings">Settings</div>
+  </nav>
+
+  <!-- ADMIN NAV -->
+  <nav class="nav-tabs hidden" id="adminNav">
+    <div class="nav-tab active" data-tab="a-overview">Overview</div>
+    <div class="nav-tab" data-tab="a-workers">Workers</div>
+    <div class="nav-tab" data-tab="a-risk">Risk Monitor</div>
+    <div class="nav-tab" data-tab="a-plans">Plans</div>
+    <div class="nav-tab" data-tab="a-triggers">Trigger Sim</div>
+  </nav>
+
+  <div class="tab-content" id="tabContent"></div>
+</div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/services.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/live-sim.js"></script>
+  <script src="assets/js/views.js"></script>
+  <script src="assets/js/api.js"></script>
+</body>
+</html>
