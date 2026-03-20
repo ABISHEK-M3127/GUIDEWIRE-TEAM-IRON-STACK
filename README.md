@@ -1,4 +1,4 @@
-# 🛡️ GigSecure
+# 🛡️ GigSecure AI Platform
 ### AI-Powered Parametric Income Protection for Gig Workers
 ### 🚀 Guidewire DEVTrails 2026 | Team Iron Stack
 
