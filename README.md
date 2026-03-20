@@ -494,8 +494,9 @@ Week 5–6 │ PAYMENTS & UI
 
 | Resource | Link |
 |---|---|
-| 🖥️ Live Demo | *(link to be added)* |
-| 🎥 Demo Video | *(link to be added)* |
+| 🖥️ Live Demo | https://abishek-m3127.github.io/GUIDEWIRE-TEAM-IRON-STACK/ |
+| 🎥 Demo Video(YOUTUBE) |https://youtu.be/NiYXrEeeQDM|
+| 🎥 Demo Video(DRIVE) | https://drive.google.com/drive/folders/1JNRNCigu3ctzazprYEYd2pHYy5TQ6ViQ?usp=drive_link|
 ---
 
 ## 👥 Team Iron Stack
